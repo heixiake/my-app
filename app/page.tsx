@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { posts } from "./blog/data";
 
@@ -12,9 +13,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans">
+
       <main className="max-w-4xl mx-auto px-6">
         {/* Hero */}
         <section className="py-24 border-b border-zinc-100 dark:border-zinc-800">
+          <Image
+            src="/next.svg"
+            alt="Next.js logo"
+            width={120}
+            height={24}
+            priority
+            className="mb-6 dark:invert"
+          />
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-xs font-medium mb-6">
             Next.js · React · TypeScript
           </div>
