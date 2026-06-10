@@ -7,36 +7,11 @@ export const metadata: Metadata = {
   description: "分享前端技术与 Next.js 实战经验",
 };
 
-const navLinks = [
-  { href: "/blog", label: "博客" },
-  { href: "/about", label: "关于 Next.js" },
-];
-
 export default function Home() {
   const recentPosts = posts.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans">
-      {/* 顶部导航 */}
-      <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
-        <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
-            我的博客
-          </Link>
-          <nav className="flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-1.5 rounded-lg text-sm text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </header>
-
       <main className="max-w-4xl mx-auto px-6">
         {/* Hero */}
         <section className="py-24 border-b border-zinc-100 dark:border-zinc-800">
@@ -132,15 +107,8 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-zinc-400 dark:text-zinc-600">
           <span>我的博客</span>
           <div className="flex items-center gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            <Link href="/blog" className="hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors">博客</Link>
+            <Link href="/about" className="hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors">关于 Next.js</Link>
           </div>
         </div>
       </footer>
