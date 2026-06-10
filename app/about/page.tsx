@@ -62,7 +62,9 @@ const routers = [
   },
 ];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  // 模拟服务端数据获取，触发 loading.tsx 显示
+  await new Promise((resolve) => setTimeout(resolve, 1500));
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans">
       {/* 顶部导航 */}
