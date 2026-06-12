@@ -6,6 +6,7 @@ export type Post = {
   date: string;
   readingTime: string;
   tag: string;
+  cover: string;
   content: string;
 };
 
@@ -18,6 +19,7 @@ export const posts: Post[] = [
     date: "2024-06-01",
     readingTime: "8 分钟",
     tag: "React",
+    cover: "https://picsum.photos/seed/react/640/360",
     content: `
 React 是目前最流行的前端 UI 库之一，学习曲线适中，生态极为丰富。本文将梳理一条清晰的学习路径。
 
@@ -79,6 +81,7 @@ Hooks 是 React 16.8 引入的革命性 API，核心 Hooks 包括：
     date: "2024-06-02",
     readingTime: "10 分钟",
     tag: "Next.js",
+    cover: "https://picsum.photos/seed/nextjs/640/360",
     content: `
 从 Pages Router 迁移到 App Router 的过程中，踩了不少坑，在此记录。
 
@@ -141,6 +144,7 @@ import { unstable_cache } from "next/cache";
     date: "2024-06-03",
     readingTime: "12 分钟",
     tag: "性能",
+    cover: "https://picsum.photos/seed/perf/640/360",
     content: `
 性能优化是前端开发中永恒的话题。本文介绍几个最常见也最有效的优化手段。
 
@@ -201,6 +205,7 @@ import debounce from "lodash/debounce";
     date: "2024-06-04",
     readingTime: "9 分钟",
     tag: "CSS",
+    cover: "https://picsum.photos/seed/cssgrid/640/360",
     content: `
 CSS Grid 是目前最强大的二维布局方案，配合 Flexbox 可以应对几乎所有布局需求。
 
@@ -279,6 +284,7 @@ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     date: "2024-06-05",
     readingTime: "15 分钟",
     tag: "TypeScript",
+    cover: "https://picsum.photos/seed/typescript/640/360",
     content: `
 TypeScript 的类型系统是图灵完备的，这意味着你可以用类型来"编程"。本文带你入门高级类型。
 

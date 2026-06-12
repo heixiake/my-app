@@ -1,4 +1,5 @@
 // Server Component — 无需 "use client"
+import Image from "next/image";
 import Link from "next/link";
 import type { Post } from "../blog/data";
 import { Button } from "@/components/ui/button";
@@ -26,8 +27,17 @@ type Props = {
 
 export default function PostCard({ post, index }: Props) {
   return (
-    <Card className="gap-3 py-0 overflow-hidden hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
-      <CardHeader className="pt-6">
+    <Card className="group gap-3 py-0 overflow-hidden hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
+      <div className="relative w-full h-44 overflow-hidden">
+        <Image
+          src={post.cover}
+          alt={post.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <CardHeader className="pt-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span
